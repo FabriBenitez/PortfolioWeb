@@ -78,7 +78,6 @@ export default function AcercaDeMi() {
                 <ul className="acerca__lista">
                   <li>Modelado de datos</li>
                   <li>Relaciones</li>
-                  <li>Operaciones CRUD</li>
                   <li>Consistencia y simplicidad</li>
                 </ul>
               </article>
