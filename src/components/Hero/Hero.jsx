@@ -10,18 +10,34 @@ export default function Hero() {
       <span className="hero__circulo hero__circulo--naranja" />
       <span className="hero__circulo hero__circulo--azul" />
       <span className="hero__circulo hero__circulo--rosa" />
+      <span className="hero__circulo hero__circulo--celeste" />
+      <span className="hero__circulo hero__circulo--rojo" />
+      <span className="hero__circulo hero__circulo--lila" />
+      <span className="hero__circulo hero__circulo--verde-claro" />
+
+      {/* Chispas de fondo*/}
+      <span className="hero__chispa_fondo1">✦</span>
+      <span className="hero__chispa_fondo2">✦</span>
+      <span className="hero__chispa_fondo3">✦</span>
+      <span className="hero__chispa_fondo4">✦</span>
+      <span className="hero__chispa_fondo5">✦</span>
+      <span className="hero__chispa_fondo6">✦</span>
+      <span className="hero__chispa_fondo7">✦</span>
+      <span className="hero__chispa_fondo8">✦</span>
+
+
 
       <svg className="hero__orbitas" viewBox="0 0 1200 600" aria-hidden="true">
         <path
           d="M70,320 C280,120 520,120 700,220 C880,320 980,480 1140,420"
           fill="none"
-          stroke="rgba(17,24,39,0.08)"
+          stroke="rgba(40, 114, 128, 0.42)"
           strokeWidth="1"
         />
         <path
           d="M110,360 C320,170 520,170 690,260 C860,350 980,510 1120,450"
           fill="none"
-          stroke="rgba(17,24,39,0.06)"
+          stroke="rgba(40, 114, 128, 0.42)"
           strokeWidth="1"
         />
       </svg>
