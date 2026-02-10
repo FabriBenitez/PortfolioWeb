@@ -1,0 +1,13 @@
+.hero {
+  background: #ffa600;
+  padding: 64px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  background-color: red;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+}
