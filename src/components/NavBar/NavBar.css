@@ -1,0 +1,146 @@
+/* Base */
+.navbar{
+  position: relative;
+  z-index: 50;
+  padding: 18px 20px 0;
+  background: transparent;
+}
+
+.navbar__contenedor{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.navbar__marca{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  color: #1f2937;
+}
+
+.navbar__punto-logo{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #111827;
+  display: inline-block;
+}
+
+.navbar__nombre{
+  letter-spacing: -0.02em;
+}
+
+.navbar__lista-enlaces{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__enlace{
+  text-decoration: none;
+  color: #374151;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.navbar__enlace:hover{
+  color: #111827;
+}
+
+.navbar__acciones{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__boton-cv{
+  text-decoration: none;
+  background: #2f3a33;
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+/* Botón hamburguesa: por defecto OCULTO (desktop) */
+.navbar__boton-hamburguesa{
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(17,24,39,0.15);
+  background: rgba(255,255,255,0.55);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Menú mobile: por defecto cerrado */
+.navbar__menu-mobile{
+  width: min(1100px, 100%);
+  margin: 10px auto 0;
+  padding: 0 20px;
+
+  display: grid;
+  gap: 10px;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+.navbar__menu-mobile--abierto{
+  max-height: 420px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar__item-mobile{
+  text-decoration: none;
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(17,24,39,0.10);
+  color: #111827;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.navbar__cv-mobile{
+  text-decoration: none;
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: #2f3a33;
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ✅ Responsive: en mobile oculto links + CV y muestro hamburguesa */
+@media (max-width: 860px){
+  .navbar__lista-enlaces{
+    display: none;
+  }
+
+  .navbar__boton-cv{
+    display: none;
+  }
+
+  .navbar__boton-hamburguesa{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

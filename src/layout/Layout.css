@@ -1,0 +1,24 @@
+.layout{
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header fijo arriba (opcional) */
+.layout__header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #f5f7f4; 
+  border-bottom: 1px solid rgba(17,24,39,0.06);
+}
+
+/* Main ocupa todo el espacio disponible */
+.layout__main{
+  flex: 1;
+}
+
+/* Footer abajo */
+.layout__footer{
+  margin-top: auto;
+}

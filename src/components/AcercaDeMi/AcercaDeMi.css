@@ -1,0 +1,96 @@
+.acerca{
+  padding: 96px 20px;
+}
+
+.acerca__contenedor{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+/* Presentación */
+.acerca__titulo{
+  margin: 0 0 24px;
+  font-size: clamp(32px, 4vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+.acerca__texto{
+  margin: 0 0 18px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #374151;
+  max-width: 70ch;
+}
+
+/* Servicios */
+.acerca__subtitulo{
+  margin: 0 0 28px;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+/* Grilla semántica: UL */
+.acerca__grilla-servicios{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.acerca__item-servicio{
+  margin: 0;
+}
+
+/* Tarjetas */
+.acerca__tarjeta{
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(17,24,39,0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.acerca__tarjeta-titulo{
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.acerca__lista{
+  margin: 0;
+  padding-left: 18px;
+  color: #4b5563;
+}
+
+.acerca__lista li{
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .acerca{
+    padding: 72px 20px;
+  }
+
+  .acerca__grilla-servicios{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px){
+  .acerca{
+    padding: 56px 16px;
+  }
+
+  .acerca__texto{
+    font-size: 16px;
+  }
+}

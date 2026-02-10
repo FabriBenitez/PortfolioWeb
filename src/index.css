@@ -1,0 +1,44 @@
+:root{
+  --fondo: #f7f2e9;
+  --texto: #1f2937;
+  --muted: #6b7280;
+  --borde: rgba(17,24,39,0.10);
+  --contenedor: 1100px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+/* Utilidad: contenedor general */
+.contenedor{
+  width: min(var(--contenedor), 100%);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Utilidad: sección con padding estándar */
+.seccion{
+  padding: 64px 0;
+}
+
+@media (max-width: 860px){
+  .seccion{
+    padding: 44px 0;
+  }
+}
+
+@media (max-width: 640px){
+  .seccion{
+    padding: 34px 0;
+  }
+}

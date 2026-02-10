@@ -1,13 +1,204 @@
-.hero {
-  background: #ffa600;
-  padding: 64px 20px;
+.hero{
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  background: #f7f2e9; /* crema */
+  overflow: hidden;
+  padding: 38px 20px 70px;
 }
 
-.container {
-  max-width: 1100px;
+.hero__contenedor{
+  width: min(1100px, 100%);
   margin: 0 auto;
   display: grid;
-  background-color: red;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
+  grid-template-columns: 360px 1fr;
+  gap: 52px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* Órbitas */
+.hero__orbitas{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* Círculos */
+.hero__circulo{
+  position: absolute;
+  border-radius: 999px;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+.hero__circulo--violeta{ width: 18px; height: 18px; background: #a78bfa; left: 42%; top: 30%; }
+.hero__circulo--verde{ width: 22px; height: 22px; background: #22c55e; left: 20%; top: 70%; }
+.hero__circulo--naranja{ width: 46px; height: 46px; background: #f97316; right: 18%; top: 20%; }
+.hero__circulo--azul{ width: 14px; height: 14px; background: #60a5fa; left: 6%; top: 46%; }
+.hero__circulo--rosa{ width: 26px; height: 26px; background: #f472b6; left: 16%; top: 22%; }
+
+/* Columna izquierda */
+.hero__columna-izquierda{
+  display: flex;
+  justify-content: center;
+}
+
+.hero__aro-foto{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  border: 2px solid rgba(31,41,55,0.2);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.767);
+  display: grid;
+  place-items: center;
+}
+
+.hero__foto-perfil{
+
+  width: 290px;
+  height: 290px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero__foto-perfil img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Columna derecha */
+.hero__columna-derecha{
+  color: #1f2937;
+}
+
+.hero__saludo{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.hero__chispa{
+  color: #f59e0b;
+}
+
+.hero__titulo{
+  margin: 0;
+  font-size: clamp(44px, 5.5vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.hero__roles{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 14px 0 10px;
+}
+
+.hero__punto-rol{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #60a5fa;
+  margin-top: 6px;
+}
+
+.hero__roles-texto p{
+  margin: 0;
+  font-weight: 900;
+  color: #374151;
+}
+
+.hero__descripcion{
+  margin: 12px 0 22px;
+  color: #6b7280;
+  max-width: 60ch;
+}
+
+/* Botones */
+.hero__acciones{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.hero__boton{
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__boton--primario{
+  background: #2f3a33;
+  color: #fff;
+}
+
+.hero__boton--fantasma{
+  background: rgba(255,255,255,0.55);
+  border-color: rgba(17,24,39,0.16);
+  color: #111827;
+}
+
+.hero__boton--oscuro{
+  background: #111827;
+  color: #fff;
+}
+
+/* Redes */
+.hero__redes{
+  display: flex;
+  gap: 10px;
+}
+
+.hero__icono-red{
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(17,24,39,0.14);
+  color: #111827;
+  font-weight: 900;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .hero__contenedor{
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 28px;
+  }
+  .hero__roles{
+    justify-content: center;
+  }
+  .hero__redes{
+    justify-content: center;
+  }
 }
