@@ -1,0 +1,329 @@
+.proyectos{
+  padding: 96px 20px;
+  scroll-margin-top: 24px;
+}
+
+.proyectos__contenedor{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+}
+
+.proyectos__encabezado{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.proyectos__eyebrow{
+  margin: 0 0 10px;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.proyectos__titulo{
+  margin: 0;
+  font-size: clamp(32px, 4vw, 42px);
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+.proyectos__descripcion{
+  margin: 0;
+  max-width: 58ch;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.proyectos__resumen{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.proyectos__pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: #374151;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.proyectos__lista{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.proyectos__item{
+  margin: 0;
+}
+
+.proyectos__card{
+  height: 100%;
+  display: grid;
+  grid-template-rows: 220px 1fr;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.proyectos__card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(17, 24, 39, 0.14);
+  box-shadow: 0 24px 52px rgba(15, 23, 42, 0.12);
+}
+
+.proyectos__visual{
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  background: linear-gradient(160deg, var(--project-surface) 0%, rgba(255, 255, 255, 0.92) 64%, #ffffff 100%);
+}
+
+.proyectos__visual::before{
+  content: "";
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  border-radius: 999px;
+  background: var(--project-accent);
+  opacity: 0.18;
+  top: -48px;
+  right: -38px;
+  filter: blur(10px);
+}
+
+.proyectos__visual::after{
+  content: "";
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  width: 118px;
+  height: 82px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 18px 28px rgba(15, 23, 42, 0.08);
+}
+
+.proyectos__visual-top,
+.proyectos__visual-copy{
+  position: relative;
+  z-index: 1;
+}
+
+.proyectos__visual-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.proyectos__numero{
+  margin: 0;
+  color: #111827;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.proyectos__tipo{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  color: #374151;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.proyectos__visual-titulo{
+  margin: 0 0 10px;
+  max-width: 12ch;
+  font-size: clamp(28px, 4vw, 34px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: #111827;
+  text-wrap: balance;
+}
+
+.proyectos__visual-texto{
+  margin: 0;
+  max-width: 30ch;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.proyectos__contenido{
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+}
+
+.proyectos__categoria{
+  margin: 0;
+  color: #0f766e;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.proyectos__nombre{
+  margin: 0;
+  color: #111827;
+  font-size: 24px;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.proyectos__texto{
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.proyectos__detalle{
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(248, 250, 252, 0.88);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.proyectos__detalle-label{
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #111827;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proyectos__detalle-texto{
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+.proyectos__stack{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.proyectos__stack-item{
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  color: #374151;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.proyectos__acciones{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.proyectos__link{
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 900;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.proyectos__link:hover{
+  transform: translateY(-1px);
+}
+
+.proyectos__link--primario{
+  background: #111827;
+  color: #ffffff;
+}
+
+.proyectos__link--secundario{
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  color: #111827;
+}
+
+@media (max-width: 960px){
+  .proyectos__lista{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px){
+  .proyectos{
+    padding: 72px 20px;
+  }
+}
+
+@media (max-width: 520px){
+  .proyectos{
+    padding: 56px 16px;
+  }
+
+  .proyectos__card{
+    grid-template-rows: 200px 1fr;
+    border-radius: 22px;
+  }
+
+  .proyectos__visual,
+  .proyectos__contenido{
+    padding: 18px;
+  }
+
+  .proyectos__visual-titulo{
+    max-width: 11ch;
+    font-size: clamp(24px, 8vw, 30px);
+  }
+
+  .proyectos__nombre{
+    font-size: 22px;
+  }
+}

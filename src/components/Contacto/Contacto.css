@@ -1,0 +1,249 @@
+.contacto{
+  position: relative;
+  padding: 100px 20px 114px;
+  scroll-margin-top: 24px;
+  overflow: hidden;
+}
+
+.contacto::before{
+  content: "";
+  position: absolute;
+  top: 140px;
+  left: -90px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.08);
+  filter: blur(36px);
+  pointer-events: none;
+}
+
+.contacto::after{
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: 40px;
+  width: 240px;
+  height: 240px;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.08);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.contacto__contenedor{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.contacto__encabezado{
+  display: grid;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.contacto__eyebrow{
+  margin: 0;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contacto__titulo{
+  margin: 0;
+  color: #111827;
+  font-size: clamp(34px, 4vw, 44px);
+  letter-spacing: -0.03em;
+}
+
+.contacto__descripcion{
+  margin: 0;
+  max-width: 44ch;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.contacto__canales{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contacto__card{
+  position: relative;
+  min-height: 320px;
+  padding: 28px;
+  border-radius: 30px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 54px rgba(15, 23, 42, 0.1);
+  display: flex;
+  align-items: flex-end;
+}
+
+.contacto__card::before{
+  content: "";
+  position: absolute;
+  inset: auto -44px -60px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.34);
+  filter: blur(6px);
+}
+
+.contacto__card--email{
+  background:
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.18), transparent 34%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.88) 0%, rgba(236, 253, 245, 0.96) 55%, rgba(240, 253, 250, 0.92) 100%);
+}
+
+.contacto__card--linkedin{
+  background:
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 34%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.88) 0%, rgba(239, 246, 255, 0.96) 58%, rgba(224, 242, 254, 0.92) 100%);
+}
+
+.contacto__marca{
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 76px;
+  height: 76px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+}
+
+.contacto__marca svg{
+  width: 34px;
+  height: 34px;
+}
+
+.contacto__marca::after{
+  content: "";
+  position: absolute;
+  inset: auto -44px -44px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.06;
+}
+
+.contacto__contenido{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+.contacto__card-eyebrow{
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contacto__card-titulo{
+  margin: 0;
+  color: #111827;
+  font-size: clamp(28px, 3.6vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  overflow-wrap: anywhere;
+}
+
+.contacto__card-texto{
+  margin: 0;
+  max-width: 34ch;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.contacto__boton{
+  width: fit-content;
+  margin-top: 8px;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #111827;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.14);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.contacto__boton:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(17, 24, 39, 0.18);
+}
+
+@media (max-width: 900px){
+  .contacto__canales{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px){
+  .contacto{
+    padding: 76px 20px 92px;
+  }
+}
+
+@media (max-width: 520px){
+  .contacto{
+    padding: 56px 16px 72px;
+  }
+
+  .contacto__encabezado{
+    margin-bottom: 24px;
+  }
+
+  .contacto__card{
+    min-height: 280px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .contacto__marca{
+    top: 18px;
+    left: 18px;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+  }
+
+  .contacto__marca svg{
+    width: 30px;
+    height: 30px;
+  }
+
+  .contacto__card-titulo{
+    font-size: clamp(24px, 7.6vw, 32px);
+  }
+
+  .contacto__card-texto{
+    max-width: 28ch;
+  }
+
+  .contacto__boton{
+    width: 100%;
+  }
+}
