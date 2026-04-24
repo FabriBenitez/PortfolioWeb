@@ -1,0 +1,220 @@
+.certificados{
+  padding: 96px 20px;
+  scroll-margin-top: 24px;
+}
+
+.certificados__contenedor{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+}
+
+.certificados__encabezado{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.certificados__eyebrow{
+  margin: 0 0 10px;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.certificados__titulo{
+  margin: 0;
+  font-size: clamp(32px, 4vw, 42px);
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+.certificados__descripcion{
+  margin: 0;
+  max-width: 58ch;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.certificados__resumen{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.certificados__pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(17,24,39,0.12);
+  background: rgba(255,255,255,0.72);
+  color: #374151;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.certificados__pill{ padding: 10px 14px; }
+
+.certificados__lista{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.certificados__item{
+  margin: 0;
+}
+
+.certificados__card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(17,24,39,0.08);
+  background: rgba(255,255,255,0.68);
+  box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.certificados__card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(15,118,110,0.18);
+  box-shadow: 0 24px 54px rgba(15,23,42,0.12);
+}
+
+.certificados__preview{
+  display: block;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(17,24,39,0.08);
+  background:
+    radial-gradient(circle at top right, rgba(14,165,233,0.28), transparent 36%),
+    linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.certificados__preview img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.certificados__preview-documento{
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  pointer-events: none;
+}
+
+.certificados__preview-fallback{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  padding: 24px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(249,115,22,0.28), transparent 32%),
+    linear-gradient(145deg, #111827 0%, #1f2937 55%, #334155 100%);
+}
+
+.certificados__preview-fallback-title{
+  color: #f8fafc;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.certificados__card:hover .certificados__preview img,
+.certificados__card:hover .certificados__preview-documento{
+  transform: scale(1.04);
+}
+
+.certificados__contenido{
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+  flex: 1;
+}
+
+.certificados__area{
+  margin: 0;
+  color: #0f766e;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.certificados__nombre{
+  margin: 0;
+  color: #111827;
+  font-size: 20px;
+  line-height: 1.18;
+}
+
+.certificados__link{
+  margin-top: auto;
+  width: fit-content;
+  text-decoration: none;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 900;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba(15,118,110,0.2);
+}
+
+.certificados__link:hover{
+  color: #0f766e;
+  border-color: rgba(15,118,110,0.42);
+}
+
+@media (max-width: 1024px){
+  .certificados__lista{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px){
+  .certificados{
+    padding: 72px 20px;
+  }
+}
+
+@media (max-width: 720px){
+  .certificados__lista{
+    grid-template-columns: 1fr;
+  }
+
+  .certificados__card{
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px){
+  .certificados{
+    padding: 56px 16px;
+  }
+
+  .certificados__contenido{
+    padding: 18px;
+  }
+
+  .certificados__preview-fallback-title{
+    font-size: 22px;
+  }
+}

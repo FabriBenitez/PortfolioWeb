@@ -3,7 +3,7 @@
   min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
-  background: #f7f2e9; /* crema */
+  background: #f7f2e9;
   overflow: hidden;
   padding: 38px 20px 70px;
 }
@@ -19,22 +19,22 @@
   z-index: 3;
 }
 
-/* Órbitas */
 .hero__orbitas{
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  opacity: 0.95;
+  z-index: 0;
+  opacity: 0.92;
+  pointer-events: none;
 }
 
-/* Círculos */
 .hero__circulo{
   position: absolute;
   border-radius: 999px;
-  z-index: 2;
-  opacity: 0.95;
+  z-index: 1;
+  opacity: 0.82;
+  pointer-events: none;
 }
 
 .hero__circulo--violeta{ width: 18px; height: 18px; background: #a78bfa; left: 42%; top: 30%; }
@@ -47,21 +47,29 @@
 .hero__circulo--lila{ width: 50px; height: 50px; background: #5704b6; left: 10%; top: 50%; }
 .hero__circulo--verde-claro{ width: 86px; height: 86px; background: #44ecc2; left: 66%; top: 52%; }
 
-.hero__chispa_fondo1{ left: 20%; top: 10%; color: #FBBF24;}
-.hero__chispa_fondo2{ left: 50%; top: 70%; color: #006989;}
-.hero__chispa_fondo3{ right: 34%; top: 5%; color: #F492F0;}
-.hero__chispa_fondo4{ left: 6%; top: 58%; color: #D7263D;}
-.hero__chispa_fondo5{ left: 30%; top: 5%; color: #233D4D;}
-.hero__chispa_fondo6{ left: 50%; top: 22%; color: #FE7F2D;}
-.hero__chispa_fondo7{ left: 80%; top: 65%; color: #5E429C;}
-.hero__chispa_fondo8{ left: 65%; top: 80%; color:#03045E;}
-.hero__chispa_fondo1, .hero__chispa_fondo2, .hero__chispa_fondo3, .hero__chispa_fondo4, .hero__chispa_fondo5, .hero__chispa_fondo6, .hero__chispa_fondo7, .hero__chispa_fondo8{
+.hero__chispa_fondo1{ left: 20%; top: 10%; color: #fbbf24; }
+.hero__chispa_fondo2{ left: 50%; top: 70%; color: #006989; }
+.hero__chispa_fondo3{ right: 34%; top: 5%; color: #f492f0; }
+.hero__chispa_fondo4{ left: 6%; top: 58%; color: #d7263d; }
+.hero__chispa_fondo5{ left: 30%; top: 5%; color: #233d4d; }
+.hero__chispa_fondo6{ left: 50%; top: 22%; color: #fe7f2d; }
+.hero__chispa_fondo7{ left: 80%; top: 65%; color: #5e429c; }
+.hero__chispa_fondo8{ left: 65%; top: 80%; color: #03045e; }
+.hero__chispa_fondo1,
+.hero__chispa_fondo2,
+.hero__chispa_fondo3,
+.hero__chispa_fondo4,
+.hero__chispa_fondo5,
+.hero__chispa_fondo6,
+.hero__chispa_fondo7,
+.hero__chispa_fondo8{
   position: absolute;
-  font-size: 35px;
-  z-index: 20;
+  font-size: clamp(24px, 2.8vw, 35px);
+  line-height: 1;
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* Columna izquierda */
 .hero__columna-izquierda{
   display: flex;
   justify-content: center;
@@ -70,18 +78,18 @@
 .hero__aro-foto{
   width: 300px;
   height: 300px;
+  padding: 5px;
   border-radius: 50%;
-  background: #000000;
-  border: 2px solid rgba(31,41,55,0.2);
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.733);
+  background: #000;
+  border: 2px solid rgba(31, 41, 55, 0.2);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.73);
   display: grid;
   place-items: center;
 }
 
 .hero__foto-perfil{
-
-  width: 290px;
-  height: 290px;
+  width: 100%;
+  height: 100%;
   border-radius: 999px;
   overflow: hidden;
   background: #fff;
@@ -94,9 +102,10 @@
   display: block;
 }
 
-/* Columna derecha */
 .hero__columna-derecha{
   color: #1f2937;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__saludo{
@@ -119,6 +128,8 @@
   font-size: clamp(44px, 5.5vw, 62px);
   line-height: 1.02;
   letter-spacing: -0.03em;
+  max-width: 10ch;
+  text-wrap: balance;
 }
 
 .hero__roles{
@@ -140,15 +151,16 @@
   margin: 0;
   font-weight: 900;
   color: #374151;
+  text-wrap: pretty;
 }
 
 .hero__descripcion{
   margin: 12px 0 22px;
   color: #6b7280;
   max-width: 60ch;
+  text-wrap: pretty;
 }
 
-/* Botones */
 .hero__acciones{
   display: flex;
   gap: 10px;
@@ -175,8 +187,8 @@
 }
 
 .hero__boton--fantasma{
-  background: rgba(255,255,255,0.55);
-  border-color: rgba(17,24,39,0.16);
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(17, 24, 39, 0.16);
   color: #111827;
 }
 
@@ -185,7 +197,6 @@
   color: #fff;
 }
 
-/* Redes */
 .hero__redes{
   display: flex;
   gap: 10px;
@@ -199,24 +210,179 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: rgba(255,255,255,0.55);
-  border: 1px solid rgba(17,24,39,0.14);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(17, 24, 39, 0.14);
   color: #111827;
   font-weight: 900;
 }
 
-/* Responsive */
 @media (max-width: 860px){
+  .hero{
+    min-height: auto;
+    padding: 28px 20px 82px;
+  }
+
   .hero__contenedor{
     grid-template-columns: 1fr;
     text-align: center;
     justify-items: center;
-    gap: 28px;
+    gap: 34px;
   }
+
+  .hero__columna-izquierda,
+  .hero__columna-derecha{
+    width: 100%;
+  }
+
+  .hero__columna-derecha{
+    max-width: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__columna-derecha::before{
+    content: "";
+    position: absolute;
+    inset: -22px -10px -16px;
+    background: radial-gradient(circle at 50% 42%, rgba(247, 242, 233, 0.96) 0%, rgba(247, 242, 233, 0.82) 58%, rgba(247, 242, 233, 0) 100%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .hero__aro-foto{
+    width: min(300px, 78vw);
+    height: min(300px, 78vw);
+  }
+
+  .hero__orbitas{
+    inset: auto 0 8%;
+    height: 46%;
+    opacity: 0.62;
+  }
+
+  .hero__titulo{
+    max-width: 9ch;
+    font-size: clamp(42px, 10vw, 58px);
+  }
+
+  .hero__roles-texto p,
+  .hero__descripcion{
+    max-width: 34ch;
+  }
+
+  .hero__circulo{
+    opacity: 0.68;
+  }
+
   .hero__roles{
     justify-content: center;
   }
+
   .hero__redes{
     justify-content: center;
   }
+
+  .hero__circulo--violeta{ left: 16%; top: 18%; }
+  .hero__circulo--verde{ left: 14%; top: 86%; }
+  .hero__circulo--naranja{ width: 24px; height: 24px; right: 19%; top: 41%; }
+  .hero__circulo--azul{ left: 4%; top: 60%; }
+  .hero__circulo--rosa{ width: 20px; height: 20px; left: 74%; top: 18%; }
+  .hero__circulo--celeste{ width: 52px; height: 52px; left: auto; right: 3%; top: 24%; opacity: 0.34; }
+  .hero__circulo--rojo{ width: 28px; height: 28px; left: auto; right: 16%; top: 79%; opacity: 0.42; }
+  .hero__circulo--lila{ width: 40px; height: 40px; left: 5%; top: 74%; opacity: 0.42; }
+  .hero__circulo--verde-claro{ width: 68px; height: 68px; left: auto; right: -2%; top: 70%; opacity: 0.34; }
+
+  .hero__chispa_fondo5,
+  .hero__chispa_fondo8{
+    display: none;
+  }
+
+  .hero__chispa_fondo1{ left: 17%; top: 21%; }
+  .hero__chispa_fondo2{ left: auto; right: 16%; top: 78%; }
+  .hero__chispa_fondo3{ right: 18%; top: 17%; }
+  .hero__chispa_fondo4{ left: 3%; top: 73%; }
+  .hero__chispa_fondo6{ left: auto; right: 18%; top: 42%; }
+  .hero__chispa_fondo7{ left: auto; right: 10%; top: 86%; }
+}
+
+@media (max-width: 520px){
+  .hero{
+    padding: 22px 16px 72px;
+  }
+
+  .hero__contenedor{
+    gap: 28px;
+  }
+
+  .hero__columna-derecha{
+    max-width: 31rem;
+  }
+
+  .hero__columna-derecha::before{
+    inset: -18px -8px -14px;
+  }
+
+  .hero__aro-foto{
+    width: min(294px, 82vw);
+    height: min(294px, 82vw);
+  }
+
+  .hero__orbitas{
+    inset: auto 2% 25%;
+    height: 34%;
+    opacity: 0.54;
+  }
+
+  .hero__titulo{
+    max-width: 8.6ch;
+    font-size: clamp(34px, 10.8vw, 50px);
+  }
+
+  .hero__roles{
+    margin: 10px 0 12px;
+  }
+
+  .hero__roles-texto p{
+    font-size: 0.98rem;
+  }
+
+  .hero__descripcion{
+    margin: 10px 0 20px;
+    font-size: 0.98rem;
+    max-width: 26ch;
+  }
+
+  .hero__acciones{
+    justify-content: center;
+  }
+
+  .hero__circulo--verde,
+  .hero__circulo--rosa,
+  .hero__circulo--celeste,
+  .hero__circulo--rojo,
+  .hero__circulo--lila,
+  .hero__chispa_fondo2,
+  .hero__chispa_fondo5,
+  .hero__chispa_fondo6,
+  .hero__chispa_fondo8{
+    display: none;
+  }
+
+  .hero__circulo--violeta{ width: 16px; height: 16px; left: 12%; top: 18%; }
+  .hero__circulo--naranja{ width: 20px; height: 20px; right: 22%; top: 43%; }
+  .hero__circulo--azul{ width: 10px; height: 10px; left: 4%; top: 68%; }
+  .hero__circulo--verde-claro{ width: 62px; height: 62px; right: -8%; top: 76%; opacity: 0.26; }
+
+  .hero__chispa_fondo1,
+  .hero__chispa_fondo3,
+  .hero__chispa_fondo4,
+  .hero__chispa_fondo7{
+    font-size: 28px;
+  }
+
+  .hero__chispa_fondo1{ left: 18%; top: 20%; }
+  .hero__chispa_fondo3{ right: 18%; top: 18%; }
+  .hero__chispa_fondo4{ left: 2%; top: 74%; }
+  .hero__chispa_fondo7{ right: 12%; top: 85%; }
 }

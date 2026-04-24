@@ -28,6 +28,7 @@ export default function Navbar() {
         <ul className="navbar__lista-enlaces">
           <li><a className="navbar__enlace" href="#acerca">ACERCA</a></li>
           <li><a className="navbar__enlace" href="#proyectos">PROYECTOS</a></li>
+          <li><a className="navbar__enlace" href="#certificados">CERTIFICADOS</a></li>
           <li><a className="navbar__enlace" href="#experiencia">EXPERIENCIA</a></li>
           <li><a className="navbar__enlace" href="#blog">BLOG</a></li>
           <li><a className="navbar__enlace" href="#contacto">CONTACTO</a></li>
@@ -59,6 +60,7 @@ export default function Navbar() {
       >
         <a className="navbar__item-mobile" href="#acerca" onClick={cerrarMenu}>ACERCA</a>
         <a className="navbar__item-mobile" href="#proyectos" onClick={cerrarMenu}>PROYECTOS</a>
+        <a className="navbar__item-mobile" href="#certificados" onClick={cerrarMenu}>CERTIFICADOS</a>
         <a className="navbar__item-mobile" href="#experiencia" onClick={cerrarMenu}>EXPERIENCIA</a>
         <a className="navbar__item-mobile" href="#blog" onClick={cerrarMenu}>BLOG</a>
         <a className="navbar__item-mobile" href="#contacto" onClick={cerrarMenu}>CONTACTO</a>
