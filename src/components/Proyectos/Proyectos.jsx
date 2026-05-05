@@ -11,6 +11,11 @@ const PROYECTOS = [
       "Centralizar ventas y stock en una sola vista para reducir errores y ordenar el circuito operativo.",
     stack: ["React", "C#", ".NET", "SQL Server"],
     insight: "Dashboard operativo y trazabilidad",
+    previewTitle: "Ordena ventas y stock sin friccion.",
+    previewText:
+      "Un flujo claro para catalogo, pedidos, clientes y reportes diarios.",
+    previewPrimary: "Ver panel",
+    previewSecondary: "Agendar demo",
     demo: "https://example.com/",
     repo: "https://github.com/",
     accent: "#0f766e",
@@ -26,6 +31,11 @@ const PROYECTOS = [
       "Mejorar la experiencia de reserva y darle al equipo una herramienta clara para organizar disponibilidad.",
     stack: ["React", "Django", "Python", "PostgreSQL"],
     insight: "Reservas, estados y automatizacion",
+    previewTitle: "Reserva turnos con seguimiento en vivo.",
+    previewText:
+      "Agenda, estados e historial en una experiencia simple para cliente y equipo.",
+    previewPrimary: "Agendar ahora",
+    previewSecondary: "Panel admin",
     demo: "https://example.com/",
     repo: "https://github.com/",
     accent: "#f97316",
@@ -41,6 +51,11 @@ const PROYECTOS = [
       "Convertir visitas en compras con un flujo corto, claro y bien integrado con el canal de cobro.",
     stack: ["React", "Mercado Pago", "Firebase", "Sass"],
     insight: "Catalogo, carrito y pago directo",
+    previewTitle: "Compra rapido y paga en pocos pasos.",
+    previewText:
+      "Una tienda pensada para vender mejor con checkout integrado y menos friccion.",
+    previewPrimary: "Explorar tienda",
+    previewSecondary: "Ir al pago",
     demo: "https://example.com/",
     repo: "https://github.com/",
     accent: "#2563eb",
@@ -56,6 +71,11 @@ const PROYECTOS = [
       "Traducir datos dispersos en decisiones rapidas con una capa visual clara para usuarios no tecnicos.",
     stack: ["React", "Supabase", "Charting", "SQL"],
     insight: "KPIs, filtros y lectura ejecutiva",
+    previewTitle: "Entiende el negocio de un vistazo.",
+    previewText:
+      "Indicadores, comparativas y filtros para decidir rapido con contexto real.",
+    previewPrimary: "Abrir reportes",
+    previewSecondary: "Comparar",
     demo: "https://example.com/",
     repo: "https://github.com/",
     accent: "#7c3aed",
@@ -71,6 +91,11 @@ const PROYECTOS = [
       "Mostrar propuesta de valor, ordenar el mensaje y recibir contactos listos para seguimiento comercial.",
     stack: ["React", "EmailJS", "Analytics", "CSS"],
     insight: "Conversion, formularios y embudo",
+    previewTitle: "Convierte visitas en leads calificados.",
+    previewText:
+      "Una landing enfocada en propuesta de valor, confianza y respuesta rapida.",
+    previewPrimary: "Ver landing",
+    previewSecondary: "Analitica",
     demo: "https://example.com/",
     repo: "https://github.com/",
     accent: "#e11d48",
@@ -86,6 +111,11 @@ const PROYECTOS = [
       "Dar visibilidad al avance, evitar cuellos de botella y mejorar la coordinacion entre areas.",
     stack: ["React", "Node", "REST API", "Trello style UX"],
     insight: "Tableros, prioridades y contexto",
+    previewTitle: "Alinea equipo, tareas y contexto.",
+    previewText:
+      "Workflows compartidos para priorizar mejor y destrabar entregas entre areas.",
+    previewPrimary: "Ver workspace",
+    previewSecondary: "Tablero sprint",
     demo: "https://example.com/",
     repo: "https://github.com/",
     accent: "#0891b2",
@@ -127,30 +157,66 @@ export default function Proyectos() {
                   "--project-surface": proyecto.surface,
                 }}
               >
-                <div className="proyectos__visual">
-                  <div className="proyectos__visual-top">
-                    <p className="proyectos__numero">Caso {proyecto.numero}</p>
-                    <span className="proyectos__tipo">{proyecto.categoria}</span>
+                <div className="proyectos__visual" aria-hidden="true">
+                  <div className="proyectos__preview-bar">
+                    <p className="proyectos__preview-brand">{proyecto.titulo.split(" ")[0]}</p>
+
+                    <div className="proyectos__preview-nav">
+                      {proyecto.stack.slice(0, 3).map((item) => (
+                        <span key={item} className="proyectos__preview-nav-item">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+
+                    <span className="proyectos__preview-tag">{proyecto.categoria}</span>
                   </div>
 
-                  <div className="proyectos__visual-copy">
-                    <h3 className="proyectos__visual-titulo">{proyecto.insight}</h3>
-                    <p className="proyectos__visual-texto">
-                      Espacio pensado para tu futura captura o mockup del proyecto.
-                    </p>
+                  <div className="proyectos__preview-canvas">
+                    <div className="proyectos__preview-copy">
+                      <span className="proyectos__preview-kicker">{proyecto.insight}</span>
+                      <p className="proyectos__preview-title">{proyecto.previewTitle}</p>
+                      <p className="proyectos__preview-texto">{proyecto.previewText}</p>
+
+                      <div className="proyectos__preview-actions">
+                        <span className="proyectos__preview-button">
+                          {proyecto.previewPrimary}
+                        </span>
+                        <span className="proyectos__preview-ghost">
+                          {proyecto.previewSecondary}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="proyectos__preview-window">
+                      <div className="proyectos__preview-window-top">
+                        <span className="proyectos__preview-window-pill" />
+                        <span className="proyectos__preview-window-pill proyectos__preview-window-pill--wide" />
+                        <span className="proyectos__preview-window-dot" />
+                      </div>
+
+                      <div className="proyectos__preview-window-body">
+                        <div className="proyectos__preview-window-sidebar">
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+
+                        <div className="proyectos__preview-window-content">
+                          <span className="proyectos__preview-window-card proyectos__preview-window-card--hero" />
+                          <div className="proyectos__preview-window-grid">
+                            <span className="proyectos__preview-window-card" />
+                            <span className="proyectos__preview-window-card" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="proyectos__contenido">
-                  <p className="proyectos__categoria">{proyecto.categoria}</p>
                   <h3 className="proyectos__nombre">{proyecto.titulo}</h3>
-
                   <p className="proyectos__texto">{proyecto.descripcion}</p>
-
-                  <div className="proyectos__detalle">
-                    <span className="proyectos__detalle-label">Objetivo</span>
-                    <p className="proyectos__detalle-texto">{proyecto.objetivo}</p>
-                  </div>
 
                   <ul className="proyectos__stack" aria-label={`Stack de ${proyecto.titulo}`}>
                     {proyecto.stack.map((item) => (
@@ -167,7 +233,32 @@ export default function Proyectos() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Ver demo
+                      <span className="proyectos__link-icon" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M11.25 4.25H15.75V8.75"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M8.25 11.75L15.75 4.25"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M14.75 10.25V13.75C14.75 14.3023 14.3023 14.75 13.75 14.75H6.25C5.69772 14.75 5.25 14.3023 5.25 13.75V6.25C5.25 5.69772 5.69772 5.25 6.25 5.25H9.75"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      Ver proyecto
                     </a>
                     <a
                       className="proyectos__link proyectos__link--secundario"
@@ -175,7 +266,7 @@ export default function Proyectos() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Ver codigo
+                      Codigo fuente
                     </a>
                   </div>
                 </div>
