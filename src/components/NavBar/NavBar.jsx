@@ -37,8 +37,10 @@ export default function Navbar() {
           </a>
 
           <button
-            className="navbar__boton-hamburguesa"
-            aria-label="Menu"
+            className={`navbar__boton-hamburguesa ${
+              menuAbierto ? "navbar__boton-hamburguesa--abierto" : ""
+            }`}
+            aria-label={menuAbierto ? "Cerrar menu" : "Abrir menu"}
             aria-expanded={menuAbierto}
             aria-controls="navbar-menu-mobile"
             onClick={() => setMenuAbierto((v) => !v)}
