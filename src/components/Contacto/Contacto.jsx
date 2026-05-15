@@ -71,12 +71,11 @@ const CANALES = [
   {
     id: "email",
     eyebrow: "Correo",
-    chip: "Canal prioritario",
-    titulo: "Charlemos por correo",
+    chip: "Respuesta directa",
+    titulo: "Correo",
     valor: EMAIL,
-    descripcion: "La forma mas directa para propuestas, entrevistas, colaboraciones o consultas profesionales.",
-    detalle: "Suelo responder con mas contexto y seguimiento por este canal.",
-    tags: ["Propuestas", "Freelance", "Consultas"],
+    descripcion:
+      "El mejor canal para propuestas, entrevistas o consultas que necesiten contexto.",
     href: MAILTO_LINK,
     accion: "Enviar correo",
     icono: <MailIcon />,
@@ -84,12 +83,11 @@ const CANALES = [
   {
     id: "linkedin",
     eyebrow: "LinkedIn",
-    chip: "Networking",
-    titulo: "Perfil profesional",
+    chip: "Perfil profesional",
+    titulo: "LinkedIn",
     valor: LINKEDIN_LABEL,
-    descripcion: "Ideal para recruiters, networking y un primer acercamiento profesional.",
-    detalle: "Perfecto para ver experiencia, recorrido y abrir una conversacion inicial.",
-    tags: ["Recruiters", "Networking", "Perfil"],
+    descripcion:
+      "Para ver mi recorrido, proyectos y abrir una conversacion profesional.",
     href: LINKEDIN_URL,
     accion: "Abrir LinkedIn",
     icono: <LinkedInIcon />,
@@ -107,27 +105,26 @@ export default function Contacto() {
               Contacto
             </h2>
             <p className="contacto__descripcion">
-              Si te interesa mi perfil para una oportunidad, un proyecto o una
-              colaboracion, elegi el canal que te resulte mas comodo para
-              escribirme.
+              Si mi perfil encaja con una busqueda, una entrevista o un proyecto
+              puntual, podes escribirme por correo o LinkedIn.
             </p>
           </header>
 
           <aside className="contacto__intro" aria-label="Preferencias de contacto">
-            <span className="contacto__intro-pill">Disponible para nuevas oportunidades</span>
+            <span className="contacto__intro-pill">Disponible para conversar</span>
             <p className="contacto__intro-texto">
-              Email para propuestas con mas contexto. LinkedIn para networking,
-              recruiters y primer contacto profesional.
+              Prefiero conversaciones claras: contexto del rol o proyecto, tiempos
+              estimados y proximo paso posible.
             </p>
 
             <div className="contacto__intro-grid">
               <div className="contacto__intro-item">
                 <strong>Respuesta directa</strong>
-                <span>Canales claros y faciles de usar.</span>
+                <span>Ideal para coordinar alcance y proximos pasos.</span>
               </div>
               <div className="contacto__intro-item">
-                <strong>Perfil visible</strong>
-                <span>Experiencia, proyectos y recorrido profesional.</span>
+                <strong>Contacto profesional</strong>
+                <span>LinkedIn para perfil, recorrido y networking.</span>
               </div>
             </div>
           </aside>
@@ -139,12 +136,11 @@ export default function Contacto() {
 
             return (
               <article key={canal.id} className={`contacto__card contacto__card--${canal.id}`}>
-                <div className="contacto__marca" aria-hidden="true">
-                  {canal.icono}
-                </div>
-
                 <div className="contacto__contenido">
                   <div className="contacto__card-top">
+                    <span className="contacto__marca" aria-hidden="true">
+                      {canal.icono}
+                    </span>
                     <span className="contacto__card-eyebrow">{canal.eyebrow}</span>
                     <span className="contacto__card-chip">{canal.chip}</span>
                   </div>
@@ -153,14 +149,6 @@ export default function Contacto() {
                   <p className="contacto__card-valor">{canal.valor}</p>
                   <p className="contacto__card-texto">{canal.descripcion}</p>
                   <p className="contacto__card-detalle">{canal.detalle}</p>
-
-                  <ul className="contacto__tags" aria-label={`Usos recomendados para ${canal.eyebrow}`}>
-                    {canal.tags.map((tag) => (
-                      <li key={tag} className="contacto__tag">
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="contacto__acciones">
                     <a

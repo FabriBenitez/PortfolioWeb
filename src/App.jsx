@@ -12,12 +12,14 @@ function App() {
   return (
     <>
       <NavBar />
-      <Hero />
-      <AcercaDeMi />
-      <Tecnologias />
-      <Proyectos />
-      <Certificados />
-      <Contacto />
+      <main>
+        <Hero />
+        <AcercaDeMi />
+        <Tecnologias />
+        <Proyectos />
+        <Certificados />
+        <Contacto />
+      </main>
       <Footer />
     </>
   );

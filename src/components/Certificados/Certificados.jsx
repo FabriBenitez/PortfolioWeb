@@ -73,10 +73,7 @@ export default function Certificados() {
           </p>
         </header>
 
-        <div className="certificados__resumen" aria-label="Resumen de certificados">
-          <span className="certificados__pill">{CERTIFICADOS.length} credenciales</span>
-          <span className="certificados__pill">Imagenes y PDF</span>
-        </div>
+        
 
         <ul className="certificados__lista">
           {CERTIFICADOS.map((certificado) => {

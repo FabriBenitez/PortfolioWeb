@@ -5,15 +5,22 @@ const PROYECTOS = [
     numero: "01",
     categoria: "Mobile",
     titulo: "21K",
+    estado: "En desarrollo",
     descripcion:
-      "Aplicacion mobile para corredores amateur que combina running y fuerza para preparar una media maraton con seguimiento de progreso.",
-    stack: ["React Native", "Expo", "TypeScript", "Supabase"],
+      "App mobile para registrar entrenamientos de running y fuerza, pensada para preparar una media maraton con seguimiento ordenado.",
+    stack: [
+      "React Native",
+      "Expo",
+      "Expo Router",
+      "TypeScript",
+      "Supabase",
+      "React Navigation",
+      "React Native Paper",
+    ],
     insight: "Running, fuerza y progreso",
     previewTitle: "Prepara tu media maraton con un plan claro.",
     previewText:
       "Una app pensada para corredores amateur con entrenamientos y evolucion visible.",
-    previewPrimary: "Ver repo",
-    previewSecondary: "Stack mobile",
     demo: "",
     repo: "https://github.com/FabriBenitez/21K",
     accent: "#0f766e",
@@ -23,15 +30,14 @@ const PROYECTOS = [
     numero: "02",
     categoria: "Educacion",
     titulo: "Lista-Estudiante",
+    estado: "Repositorio publico",
     descripcion:
-      "Aplicacion web mobile-first para tomar asistencia escolar en segundos por curso, con modo demo y backend en Firebase.",
-    stack: ["React", "Vite", "Firebase", "CSS"],
+      "Aplicacion web mobile-first para tomar asistencia escolar en pocos pasos, con Firebase y un flujo simple para uso en aula.",
+    stack: ["React", "Vite", "Firebase", "React Router", "JavaScript", "CSS"],
     insight: "Asistencia rapida y flujo mobile",
     previewTitle: "Toma asistencia en 20 segundos.",
     previewText:
       "Pensada para aula real, con foco en velocidad, claridad y uso desde celular.",
-    previewPrimary: "Ver repo",
-    previewSecondary: "Codigo fuente",
     demo: "",
     repo: "https://github.com/FabriBenitez/Lista-Estudiante",
     accent: "#f97316",
@@ -39,17 +45,25 @@ const PROYECTOS = [
   },
   {
     numero: "03",
-    categoria: "E-commerce",
+    categoria: "Full stack",
     titulo: "Grizzly",
+    estado: "Full stack",
     descripcion:
-      "Frontend completo para e-commerce de suplementos, con una interfaz comercial trabajada para catalogo, conversion y navegacion clara.",
-    stack: ["React", "Vite", "JavaScript", "CSS"],
-    insight: "Catalogo, marca y conversion",
-    previewTitle: "Un e-commerce pensado para vender mejor.",
+      "E-commerce fullstack de suplementos con catalogo, Supabase, TypeScript e integraciones para venta online.",
+    stack: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Supabase",
+      "Sass",
+      "Recharts",
+      "React Router",
+      "Vitest",
+    ],
+    insight: "Catalogo, datos y venta online",
+    previewTitle: "Un e-commerce completo para vender mejor.",
     previewText:
-      "Diseno de tienda, estructura de producto y una experiencia visual mas pulida.",
-    previewPrimary: "Ver frontend",
-    previewSecondary: "Explorar UI",
+      "Frontend, datos e integraciones en una experiencia comercial mas ordenada.",
     demo: "",
     repo: "https://github.com/FabriBenitez/Grizzly",
     accent: "#2563eb",
@@ -59,15 +73,24 @@ const PROYECTOS = [
     numero: "04",
     categoria: "Full stack",
     titulo: "Ecommerce",
+    estado: "Full stack",
     descripcion:
-      "Aplicacion full stack con backend en ASP.NET Core, frontend en React y base de datos SQL Server para resolver ventas y pagos en un flujo integrado.",
-    stack: ["React", "ASP.NET Core", "SQL Server", "Mercado Pago"],
+      "Aplicacion full stack con ASP.NET Core, React y SQL Server para integrar ventas, datos y pagos en un mismo flujo.",
+    stack: [
+      "React",
+      "Vite",
+      "ASP.NET Core",
+      ".NET 7",
+      "Entity Framework Core",
+      "SQL Server",
+      "JWT",
+      "Mercado Pago",
+      "Swagger",
+    ],
     insight: "Backend, frontend y cobros",
     previewTitle: "Conecta negocio, compra y pago.",
     previewText:
       "Un caso fuerte para mostrar integracion real entre interfaz, API y base de datos.",
-    previewPrimary: "Ver repo",
-    previewSecondary: "Stack completo",
     demo: "",
     repo: "https://github.com/FabriBenitez/Ecommerce",
     accent: "#7c3aed",
@@ -77,15 +100,25 @@ const PROYECTOS = [
     numero: "05",
     categoria: "Backend",
     titulo: "api-mercado-pago",
+    estado: "Backend",
     descripcion:
-      "Implementacion de pagos con la API de Mercado Pago usando .NET, Entity Framework Core y SQL Server.",
-    stack: ["ASP.NET Core", "C#", "Entity Framework", "SQL Server"],
+      "Backend en .NET para implementar pagos con Mercado Pago, persistencia y logica de negocio.",
+    stack: [
+      "ASP.NET Core",
+      ".NET 7",
+      "C#",
+      "Entity Framework Core",
+      "SQL Server",
+      "MercadoPagoCore",
+      "Swagger",
+      "React",
+      "Vite",
+      "Axios",
+    ],
     insight: "Pagos, API y persistencia",
     previewTitle: "Integra pagos con una base solida.",
     previewText:
       "Ideal para mostrar trabajo backend con integraciones externas y logica de negocio.",
-    previewPrimary: "Ver backend",
-    previewSecondary: "Mercado Pago",
     demo: "",
     repo: "https://github.com/FabriBenitez/api-mercado-pago",
     accent: "#e11d48",
@@ -95,15 +128,14 @@ const PROYECTOS = [
     numero: "06",
     categoria: "SaaS en desarrollo",
     titulo: "AuditFlow",
+    estado: "SaaS en desarrollo",
     descripcion:
-      "SaaS propio enfocado en auditorias, seguimiento de hallazgos y trazabilidad de acciones para equipos que necesitan ordenar procesos.",
+      "SaaS propio para auditorias, hallazgos y seguimiento de acciones. Lo estoy usando como producto para ordenar procesos reales.",
     stack: ["SaaS", "Auditorias", "Seguimiento", "Producto propio"],
     insight: "Hallazgos, responsables y trazabilidad",
     previewTitle: "Convierte auditorias en un flujo claro.",
     previewText:
       "Lo sume para mostrar lo que estas construyendo hoy y hacia donde evoluciona tu perfil.",
-    previewPrimary: "En desarrollo",
-    previewSecondary: "Proximo lanzamiento",
     demo: "",
     repo: "",
     accent: "#0891b2",
@@ -124,15 +156,10 @@ export default function Proyectos() {
           </div>
 
           <p className="proyectos__descripcion">
-            Una seleccion de proyectos reales que mezcla producto, mobile,
-            backend, e-commerce y el SaaS que estas construyendo hoy.
+            Proyectos propios y trabajos en desarrollo donde muestro como pienso,
+            organizo y construyo soluciones con codigo.
           </p>
         </header>
-
-        <div className="proyectos__resumen" aria-label="Resumen de proyectos">
-          <span className="proyectos__pill">{PROYECTOS.length} proyectos seleccionados</span>
-          <span className="proyectos__pill">Mobile, SaaS, backend y e-commerce</span>
-        </div>
 
         <ul className="proyectos__lista">
           {PROYECTOS.map((proyecto) => (
@@ -148,31 +175,15 @@ export default function Proyectos() {
                   <div className="proyectos__preview-bar">
                     <p className="proyectos__preview-brand">{proyecto.titulo.split(" ")[0]}</p>
 
-                    <div className="proyectos__preview-nav">
-                      {proyecto.stack.slice(0, 3).map((item) => (
-                        <span key={item} className="proyectos__preview-nav-item">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-
                     <span className="proyectos__preview-tag">{proyecto.categoria}</span>
                   </div>
 
                   <div className="proyectos__preview-canvas">
                     <div className="proyectos__preview-copy">
+                      <span className="proyectos__estado">{proyecto.estado}</span>
                       <span className="proyectos__preview-kicker">{proyecto.insight}</span>
                       <p className="proyectos__preview-title">{proyecto.previewTitle}</p>
                       <p className="proyectos__preview-texto">{proyecto.previewText}</p>
-
-                      <div className="proyectos__preview-actions">
-                        <span className="proyectos__preview-button">
-                          {proyecto.previewPrimary}
-                        </span>
-                        <span className="proyectos__preview-ghost">
-                          {proyecto.previewSecondary}
-                        </span>
-                      </div>
                     </div>
 
                     <div className="proyectos__preview-window">
@@ -202,7 +213,10 @@ export default function Proyectos() {
                 </div>
 
                 <div className="proyectos__contenido">
-                  <h3 className="proyectos__nombre">{proyecto.titulo}</h3>
+                  <div className="proyectos__contenido-top">
+                    <h3 className="proyectos__nombre">{proyecto.titulo}</h3>
+                    <span className="proyectos__contenido-estado">{proyecto.estado}</span>
+                  </div>
                   <p className="proyectos__texto">{proyecto.descripcion}</p>
 
                   <ul className="proyectos__stack" aria-label={`Stack de ${proyecto.titulo}`}>
