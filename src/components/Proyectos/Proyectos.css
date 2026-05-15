@@ -424,6 +424,11 @@
     0 10px 20px rgba(52, 69, 62, 0.16);
 }
 
+.proyectos__link--disabled{
+  cursor: default;
+  opacity: 0.88;
+}
+
 .proyectos__link-icon{
   display: inline-flex;
   width: 18px;

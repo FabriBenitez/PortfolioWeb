@@ -3,121 +3,109 @@ import "./Proyectos.css";
 const PROYECTOS = [
   {
     numero: "01",
-    categoria: "Sistema interno",
-    titulo: "Plataforma de ventas y stock",
+    categoria: "Mobile",
+    titulo: "21K",
     descripcion:
-      "Gestion de productos, pedidos, clientes y reportes para una operacion comercial con seguimiento diario.",
-    objetivo:
-      "Centralizar ventas y stock en una sola vista para reducir errores y ordenar el circuito operativo.",
-    stack: ["React", "C#", ".NET", "SQL Server"],
-    insight: "Dashboard operativo y trazabilidad",
-    previewTitle: "Ordena ventas y stock sin friccion.",
+      "Aplicacion mobile para corredores amateur que combina running y fuerza para preparar una media maraton con seguimiento de progreso.",
+    stack: ["React Native", "Expo", "TypeScript", "Supabase"],
+    insight: "Running, fuerza y progreso",
+    previewTitle: "Prepara tu media maraton con un plan claro.",
     previewText:
-      "Un flujo claro para catalogo, pedidos, clientes y reportes diarios.",
-    previewPrimary: "Ver panel",
-    previewSecondary: "Agendar demo",
-    demo: "https://example.com/",
-    repo: "https://github.com/",
+      "Una app pensada para corredores amateur con entrenamientos y evolucion visible.",
+    previewPrimary: "Ver repo",
+    previewSecondary: "Stack mobile",
+    demo: "",
+    repo: "https://github.com/FabriBenitez/21K",
     accent: "#0f766e",
-    surface: "#ccfbf1",
+    surface: "#d1fae5",
   },
   {
     numero: "02",
-    categoria: "Servicios",
-    titulo: "Portal de turnos y seguimiento",
+    categoria: "Educacion",
+    titulo: "Lista-Estudiante",
     descripcion:
-      "Agenda online con estados, historial y panel administrativo para coordinar servicios de punta a punta.",
-    objetivo:
-      "Mejorar la experiencia de reserva y darle al equipo una herramienta clara para organizar disponibilidad.",
-    stack: ["React", "Django", "Python", "PostgreSQL"],
-    insight: "Reservas, estados y automatizacion",
-    previewTitle: "Reserva turnos con seguimiento en vivo.",
+      "Aplicacion web mobile-first para tomar asistencia escolar en segundos por curso, con modo demo y backend en Firebase.",
+    stack: ["React", "Vite", "Firebase", "CSS"],
+    insight: "Asistencia rapida y flujo mobile",
+    previewTitle: "Toma asistencia en 20 segundos.",
     previewText:
-      "Agenda, estados e historial en una experiencia simple para cliente y equipo.",
-    previewPrimary: "Agendar ahora",
-    previewSecondary: "Panel admin",
-    demo: "https://example.com/",
-    repo: "https://github.com/",
+      "Pensada para aula real, con foco en velocidad, claridad y uso desde celular.",
+    previewPrimary: "Ver repo",
+    previewSecondary: "Codigo fuente",
+    demo: "",
+    repo: "https://github.com/FabriBenitez/Lista-Estudiante",
     accent: "#f97316",
     surface: "#ffedd5",
   },
   {
     numero: "03",
     categoria: "E-commerce",
-    titulo: "Tienda online con checkout integrado",
+    titulo: "Grizzly",
     descripcion:
-      "Catalogo, carrito, pagos y seguimiento de compra para un negocio que necesita vender de forma simple.",
-    objetivo:
-      "Convertir visitas en compras con un flujo corto, claro y bien integrado con el canal de cobro.",
-    stack: ["React", "Mercado Pago", "Firebase", "Sass"],
-    insight: "Catalogo, carrito y pago directo",
-    previewTitle: "Compra rapido y paga en pocos pasos.",
+      "Frontend completo para e-commerce de suplementos, con una interfaz comercial trabajada para catalogo, conversion y navegacion clara.",
+    stack: ["React", "Vite", "JavaScript", "CSS"],
+    insight: "Catalogo, marca y conversion",
+    previewTitle: "Un e-commerce pensado para vender mejor.",
     previewText:
-      "Una tienda pensada para vender mejor con checkout integrado y menos friccion.",
-    previewPrimary: "Explorar tienda",
-    previewSecondary: "Ir al pago",
-    demo: "https://example.com/",
-    repo: "https://github.com/",
+      "Diseno de tienda, estructura de producto y una experiencia visual mas pulida.",
+    previewPrimary: "Ver frontend",
+    previewSecondary: "Explorar UI",
+    demo: "",
+    repo: "https://github.com/FabriBenitez/Grizzly",
     accent: "#2563eb",
     surface: "#dbeafe",
   },
   {
     numero: "04",
-    categoria: "Analitica",
-    titulo: "Dashboard de indicadores operativos",
+    categoria: "Full stack",
+    titulo: "Ecommerce",
     descripcion:
-      "Panel con metricas, comparativas y filtros para que un equipo pueda leer el negocio en tiempo real.",
-    objetivo:
-      "Traducir datos dispersos en decisiones rapidas con una capa visual clara para usuarios no tecnicos.",
-    stack: ["React", "Supabase", "Charting", "SQL"],
-    insight: "KPIs, filtros y lectura ejecutiva",
-    previewTitle: "Entiende el negocio de un vistazo.",
+      "Aplicacion full stack con backend en ASP.NET Core, frontend en React y base de datos SQL Server para resolver ventas y pagos en un flujo integrado.",
+    stack: ["React", "ASP.NET Core", "SQL Server", "Mercado Pago"],
+    insight: "Backend, frontend y cobros",
+    previewTitle: "Conecta negocio, compra y pago.",
     previewText:
-      "Indicadores, comparativas y filtros para decidir rapido con contexto real.",
-    previewPrimary: "Abrir reportes",
-    previewSecondary: "Comparar",
-    demo: "https://example.com/",
-    repo: "https://github.com/",
+      "Un caso fuerte para mostrar integracion real entre interfaz, API y base de datos.",
+    previewPrimary: "Ver repo",
+    previewSecondary: "Stack completo",
+    demo: "",
+    repo: "https://github.com/FabriBenitez/Ecommerce",
     accent: "#7c3aed",
     surface: "#ede9fe",
   },
   {
     numero: "05",
-    categoria: "Marketing",
-    titulo: "Landing de captacion de leads",
+    categoria: "Backend",
+    titulo: "api-mercado-pago",
     descripcion:
-      "Sitio orientado a conversion con secciones comerciales, pruebas sociales y captura de consultas.",
-    objetivo:
-      "Mostrar propuesta de valor, ordenar el mensaje y recibir contactos listos para seguimiento comercial.",
-    stack: ["React", "EmailJS", "Analytics", "CSS"],
-    insight: "Conversion, formularios y embudo",
-    previewTitle: "Convierte visitas en leads calificados.",
+      "Implementacion de pagos con la API de Mercado Pago usando .NET, Entity Framework Core y SQL Server.",
+    stack: ["ASP.NET Core", "C#", "Entity Framework", "SQL Server"],
+    insight: "Pagos, API y persistencia",
+    previewTitle: "Integra pagos con una base solida.",
     previewText:
-      "Una landing enfocada en propuesta de valor, confianza y respuesta rapida.",
-    previewPrimary: "Ver landing",
-    previewSecondary: "Analitica",
-    demo: "https://example.com/",
-    repo: "https://github.com/",
+      "Ideal para mostrar trabajo backend con integraciones externas y logica de negocio.",
+    previewPrimary: "Ver backend",
+    previewSecondary: "Mercado Pago",
+    demo: "",
+    repo: "https://github.com/FabriBenitez/api-mercado-pago",
     accent: "#e11d48",
     surface: "#ffe4e6",
   },
   {
     numero: "06",
-    categoria: "Colaboracion",
-    titulo: "Workspace de tareas para equipos",
+    categoria: "SaaS en desarrollo",
+    titulo: "AuditFlow",
     descripcion:
-      "Tableros, prioridades, comentarios y seguimiento para ordenar trabajo interno en proyectos compartidos.",
-    objetivo:
-      "Dar visibilidad al avance, evitar cuellos de botella y mejorar la coordinacion entre areas.",
-    stack: ["React", "Node", "REST API", "Trello style UX"],
-    insight: "Tableros, prioridades y contexto",
-    previewTitle: "Alinea equipo, tareas y contexto.",
+      "SaaS propio enfocado en auditorias, seguimiento de hallazgos y trazabilidad de acciones para equipos que necesitan ordenar procesos.",
+    stack: ["SaaS", "Auditorias", "Seguimiento", "Producto propio"],
+    insight: "Hallazgos, responsables y trazabilidad",
+    previewTitle: "Convierte auditorias en un flujo claro.",
     previewText:
-      "Workflows compartidos para priorizar mejor y destrabar entregas entre areas.",
-    previewPrimary: "Ver workspace",
-    previewSecondary: "Tablero sprint",
-    demo: "https://example.com/",
-    repo: "https://github.com/",
+      "Lo sume para mostrar lo que estas construyendo hoy y hacia donde evoluciona tu perfil.",
+    previewPrimary: "En desarrollo",
+    previewSecondary: "Proximo lanzamiento",
+    demo: "",
+    repo: "",
     accent: "#0891b2",
     surface: "#cffafe",
   },
@@ -136,15 +124,14 @@ export default function Proyectos() {
           </div>
 
           <p className="proyectos__descripcion">
-            Te deje 6 proyectos armados con una estructura comoda de editar para
-            que despues reemplaces textos, stacks, links y capturas con tus
-            casos reales.
+            Una seleccion de proyectos reales que mezcla producto, mobile,
+            backend, e-commerce y el SaaS que estas construyendo hoy.
           </p>
         </header>
 
         <div className="proyectos__resumen" aria-label="Resumen de proyectos">
-          <span className="proyectos__pill">{PROYECTOS.length} proyectos listos para editar</span>
-          <span className="proyectos__pill">Analisis, frontend y backend</span>
+          <span className="proyectos__pill">{PROYECTOS.length} proyectos seleccionados</span>
+          <span className="proyectos__pill">Mobile, SaaS, backend y e-commerce</span>
         </div>
 
         <ul className="proyectos__lista">
@@ -227,47 +214,55 @@ export default function Proyectos() {
                   </ul>
 
                   <div className="proyectos__acciones">
-                    <a
-                      className="proyectos__link proyectos__link--primario"
-                      href={proyecto.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="proyectos__link-icon" aria-hidden="true">
-                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M11.25 4.25H15.75V8.75"
-                            stroke="currentColor"
-                            strokeWidth="1.7"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M8.25 11.75L15.75 4.25"
-                            stroke="currentColor"
-                            strokeWidth="1.7"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M14.75 10.25V13.75C14.75 14.3023 14.3023 14.75 13.75 14.75H6.25C5.69772 14.75 5.25 14.3023 5.25 13.75V6.25C5.25 5.69772 5.69772 5.25 6.25 5.25H9.75"
-                            stroke="currentColor"
-                            strokeWidth="1.7"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    {proyecto.demo || proyecto.repo ? (
+                      <a
+                        className="proyectos__link proyectos__link--primario"
+                        href={proyecto.demo || proyecto.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span className="proyectos__link-icon" aria-hidden="true">
+                          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M11.25 4.25H15.75V8.75"
+                              stroke="currentColor"
+                              strokeWidth="1.7"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M8.25 11.75L15.75 4.25"
+                              stroke="currentColor"
+                              strokeWidth="1.7"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M14.75 10.25V13.75C14.75 14.3023 14.3023 14.75 13.75 14.75H6.25C5.69772 14.75 5.25 14.3023 5.25 13.75V6.25C5.25 5.69772 5.69772 5.25 6.25 5.25H9.75"
+                              stroke="currentColor"
+                              strokeWidth="1.7"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        {proyecto.demo ? "Ver proyecto" : "Ver repositorio"}
+                      </a>
+                    ) : (
+                      <span className="proyectos__link proyectos__link--primario proyectos__link--disabled">
+                        En desarrollo
                       </span>
-                      Ver proyecto
-                    </a>
-                    <a
-                      className="proyectos__link proyectos__link--secundario"
-                      href={proyecto.repo}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Codigo fuente
-                    </a>
+                    )}
+                    {proyecto.demo && proyecto.repo ? (
+                      <a
+                        className="proyectos__link proyectos__link--secundario"
+                        href={proyecto.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Codigo fuente
+                      </a>
+                    ) : null}
                   </div>
                 </div>
               </article>

@@ -44,12 +44,39 @@ function LinkedInIcon() {
   );
 }
 
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M6.25 13.75 13.75 6.25"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.5 6.25h6.25V12.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 const CANALES = [
   {
     id: "email",
     eyebrow: "Correo",
-    titulo: EMAIL,
-    descripcion: "La forma mas directa para propuestas, entrevistas o consultas profesionales.",
+    chip: "Canal prioritario",
+    titulo: "Charlemos por correo",
+    valor: EMAIL,
+    descripcion: "La forma mas directa para propuestas, entrevistas, colaboraciones o consultas profesionales.",
+    detalle: "Suelo responder con mas contexto y seguimiento por este canal.",
+    tags: ["Propuestas", "Freelance", "Consultas"],
     href: MAILTO_LINK,
     accion: "Enviar correo",
     icono: <MailIcon />,
@@ -57,8 +84,12 @@ const CANALES = [
   {
     id: "linkedin",
     eyebrow: "LinkedIn",
-    titulo: LINKEDIN_LABEL,
+    chip: "Networking",
+    titulo: "Perfil profesional",
+    valor: LINKEDIN_LABEL,
     descripcion: "Ideal para recruiters, networking y un primer acercamiento profesional.",
+    detalle: "Perfecto para ver experiencia, recorrido y abrir una conversacion inicial.",
+    tags: ["Recruiters", "Networking", "Perfil"],
     href: LINKEDIN_URL,
     accion: "Abrir LinkedIn",
     icono: <LinkedInIcon />,
@@ -69,15 +100,38 @@ export default function Contacto() {
   return (
     <section id="contacto" className="contacto" aria-labelledby="contacto-titulo">
       <div className="contacto__contenedor">
-        <header className="contacto__encabezado">
-          <p className="contacto__eyebrow">Canales de contacto</p>
-          <h2 id="contacto-titulo" className="contacto__titulo">
-            Contacto
-          </h2>
-          <p className="contacto__descripcion">
-            Elegi el canal que te resulte mas comodo para escribirme.
-          </p>
-        </header>
+        <div className="contacto__top">
+          <header className="contacto__encabezado">
+            <p className="contacto__eyebrow">Canales de contacto</p>
+            <h2 id="contacto-titulo" className="contacto__titulo">
+              Contacto
+            </h2>
+            <p className="contacto__descripcion">
+              Si te interesa mi perfil para una oportunidad, un proyecto o una
+              colaboracion, elegi el canal que te resulte mas comodo para
+              escribirme.
+            </p>
+          </header>
+
+          <aside className="contacto__intro" aria-label="Preferencias de contacto">
+            <span className="contacto__intro-pill">Disponible para nuevas oportunidades</span>
+            <p className="contacto__intro-texto">
+              Email para propuestas con mas contexto. LinkedIn para networking,
+              recruiters y primer contacto profesional.
+            </p>
+
+            <div className="contacto__intro-grid">
+              <div className="contacto__intro-item">
+                <strong>Respuesta directa</strong>
+                <span>Canales claros y faciles de usar.</span>
+              </div>
+              <div className="contacto__intro-item">
+                <strong>Perfil visible</strong>
+                <span>Experiencia, proyectos y recorrido profesional.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
 
         <div className="contacto__canales">
           {CANALES.map((canal) => {
@@ -90,18 +144,37 @@ export default function Contacto() {
                 </div>
 
                 <div className="contacto__contenido">
-                  <span className="contacto__card-eyebrow">{canal.eyebrow}</span>
-                  <h3 className="contacto__card-titulo">{canal.titulo}</h3>
-                  <p className="contacto__card-texto">{canal.descripcion}</p>
+                  <div className="contacto__card-top">
+                    <span className="contacto__card-eyebrow">{canal.eyebrow}</span>
+                    <span className="contacto__card-chip">{canal.chip}</span>
+                  </div>
 
-                  <a
-                    className="contacto__boton"
-                    href={canal.href}
-                    target={isExternal ? "_blank" : undefined}
-                    rel={isExternal ? "noreferrer" : undefined}
-                  >
-                    {canal.accion}
-                  </a>
+                  <h3 className="contacto__card-titulo">{canal.titulo}</h3>
+                  <p className="contacto__card-valor">{canal.valor}</p>
+                  <p className="contacto__card-texto">{canal.descripcion}</p>
+                  <p className="contacto__card-detalle">{canal.detalle}</p>
+
+                  <ul className="contacto__tags" aria-label={`Usos recomendados para ${canal.eyebrow}`}>
+                    {canal.tags.map((tag) => (
+                      <li key={tag} className="contacto__tag">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="contacto__acciones">
+                    <a
+                      className="contacto__boton"
+                      href={canal.href}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer" : undefined}
+                    >
+                      <span>{canal.accion}</span>
+                      <span className="contacto__boton-icono" aria-hidden="true">
+                        <ArrowIcon />
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </article>
             );
